@@ -1,0 +1,13 @@
+services:
+  - environment_slug: go
+    github:
+      branch: master
+      deploy_on_push: true
+      repo: kokweikhong/profilm
+    instance_count: 1
+    # instance_size_slug: apps-s-1vcpu-1gb
+    internal_ports:
+      - 8080
+    name: internal-service
+    build_command: go build -o bin/profilm cmd/profilm/main.go
+    run_command: bin/profilm
