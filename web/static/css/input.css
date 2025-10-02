@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* covert rgb(0, 175, 98) to hex */
+  --color-primary: #00af62;
+
+  --font-opensans: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-opensans);
+  color: #333;
+}

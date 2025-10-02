@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../static/css/output.css" />
+
+    <title>Warranty</title>
+  </head>
+  <body>
+    <main>
+      <div class="@container mx-auto px-8 py-16 max-w-3xl">
+        <!-- 漆面膜 → Paint protection film (PPF)
+            
+            窗膜 → Window film / Window tint
+            
+            天窗冰甲 → Sunroof ice shield (or sunroof protective film, depending on context) -->
+        <!-- rounded outline with primary color -->
+        <!-- make a selection for responsive design -->
+
+        <div
+          class="rounded-2xl border-2 border-primary w-full flex flex-col items-center overflow-hidden justify-center gap-2"
+        >
+          <select
+            name="warranty_type"
+            id="warranty_type"
+            class="p-4 outline-primary focus:outline-none w-full whitespace-normal"
+          >
+            <option value="ppf" class="whitespace-normal">
+              Paint Protection Film (PPF)
+            </option>
+            <option value="window_film" class="whitespace-normal">
+              Window Film
+            </option>
+            <option value="sunroof_ice_shield" class="whitespace-normal">
+              Sunroof Ice Shield
+            </option>
+          </select>
+
+          <input
+            type="text"
+            name="warranty_code"
+            id="warranty_code"
+            placeholder="Enter car plate number"
+            class="p-4 outline-none focus:outline-primary w-full border-t border-primary"
+          />
+          <button class="bg-primary text-white p-4 w-full">Search</button>
+        </div>
+
+        <!-- Warranty Information Link -->
+        <a href="/warranty/info" class="mt-8 flex items-center justify-between">
+          <div>
+            <p class="grid grid-cols-[1fr_2fr] gap-4 mt-4">
+              <span>Warranty Number:</span>
+              <span class="text-primary">Testing Warranty Number</span>
+            </p>
+            <p class="grid grid-cols-[1fr_2fr] gap-4 mt-4">
+              <span>Customer Name:</span>
+              <span>Testing Customer Name</span>
+            </p>
+            <p class="grid grid-cols-[1fr_2fr] gap-4 mt-4">
+              <span>Car Plate Number:</span>
+              <span>Testing Car Plate Number</span>
+            </p>
+            <p class="grid grid-cols-[1fr_2fr] gap-4 mt-4">
+              <span>Product Type:</span>
+              <span>Paint Protection Film (PPF)</span>
+            </p>
+            <p class="grid grid-cols-[1fr_2fr] gap-4 mt-4">
+              <span>Installation Date:</span>
+              <span>2023-10-10</span>
+            </p>
+          </div>
+          <div>
+            <!-- svg arrow right -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 text-primary float-right"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </div>
+        </a>
+
+        <div id="warranty_content" class="mt-8 leading-7">
+          <!-- PPF warranty content -->
+          <div id="ppf_warranty_content" class="block">
+            <h3 class="text-primary font-medium">
+              *Window film warranty coverage
+            </h3>
+            <p>During the warranty period, the following will not occur:</p>
+            <ol class="list-decimal list-inside">
+              <li>Metal oxidation on the membrane surface;</li>
+              <li>
+                The membrane surface is bubbling, cracking and delamination;
+              </li>
+              <li>The side guard fades significantly;</li>
+              <li>Warping and adhesive failure;</li>
+            </ol>
+            <p>
+              If this happens, the manufacturer will provide the same quantity
+              for replacement.
+            </p>
+            <h3 class="text-primary font-medium mt-4">
+              *Not covered by warranty
+            </h3>
+            <ol class="list-decimal list-inside">
+              <li>Illegal or improper installation</li>
+              <li>
+                Damage to the membrane caused by accidents or human factors
+              </li>
+              <li>
+                Improper use, maintenance, cleaning or misoperation of the
+                product
+              </li>
+              <li>Installation by unauthorized and uncertified installers</li>
+            </ol>
+          </div>
+
+          <!-- window film warranty content -->
+          <div id="window_film_warranty_content" class="hidden">
+            <h3 class="text-primary font-medium">
+              *Window film warranty coverage
+            </h3>
+            <p>During the warranty period, the following will not occur:</p>
+            <ol class="list-decimal list-inside">
+              <li>Metal oxidation on the membrane surface;</li>
+              <li>
+                The membrane surface is bubbling, cracking and delamination;
+              </li>
+              <li>The side guard fades significantly;</li>
+              <li>Warping and adhesive failure;</li>
+            </ol>
+            <p>
+              If this happens, the manufacturer will provide the same quantity
+              for replacement.
+            </p>
+            <h3 class="text-primary font-medium mt-4">
+              *Not covered by warranty
+            </h3>
+            <ol class="list-decimal list-inside">
+              <li>Illegal or improper installation</li>
+              <li>
+                Damage to the membrane caused by accidents or human factors
+              </li>
+              <li>
+                Improper use, maintenance, cleaning or misoperation of the
+                product
+              </li>
+              <li>Installation by unauthorized and uncertified installers</li>
+            </ol>
+          </div>
+
+          <!-- sunroof ice shield warranty content -->
+          <div id="sunroof_ice_shield_warranty_content" class="hidden">
+            <h3 class="text-primary font-medium">
+              *Sunroof Ice Shield warranty coverage
+            </h3>
+            <p>
+              The warranty period for each model of product is from the date of
+              purchase and installation. Adhesive failure, bubbling, cracking,
+              delamination, warping, or other product-related defects will not
+              occur. If any defects occur, the manufacturer will provide an
+              equal replacement. The warranty period for each model of product
+              is from the date of purchase and installation. Extensive water
+              spots, rain stains, yellowing, or film surface distortion will not
+              occur. If any defects occur, the manufacturer will provide an
+              equal replacement.
+            </p>
+            <h3 class="text-primary font-medium mt-4">
+              *Not covered by warranty
+            </h3>
+            <ol class="list-decimal list-inside">
+              <li>
+                Only the surface of the car sunroof is installed. Products
+                installed on non-sunroof areas are not covered by the warranty.
+              </li>
+              <li>
+                Improper use, maintenance, cleaning or misoperation of the
+                product
+              </li>
+              <li>
+                Losses caused by construction on non-automotive sunroof
+                surfaces, natural disasters, vehicle accidents, external wear
+                and tear, and other reasons unrelated to product production
+                materials
+              </li>
+              <li>Installation by unauthorized and uncertified installers</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../static/js/warranty_search.index.js"></script>
+  </body>
+</html>
