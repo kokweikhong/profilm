@@ -9,5 +9,5 @@ services:
     # internal_ports:
     #   - 8080
     name: internal-service
-    build_command: go build -o bin/profilm cmd/profilm/main.go
+    build_command: cd cmd/profilm && go build -o bin/profilm
     run_command: bin/profilm
